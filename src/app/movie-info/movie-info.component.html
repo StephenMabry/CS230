@@ -1,0 +1,9 @@
+<p *ngIf="movInfo == undefined">Failed fetching user data</p>
+
+<div *ngIf="movInfo != undefined" class="container-fluid user-information">
+    <div class="row">
+        <div class="col-3">
+            Title:{{movInfo.title}}
+        </div>
+    </div>
+</div>
