@@ -20,9 +20,18 @@ export class MovieInfoComponent implements OnInit {
     this.showMovieInfo();
   }
 
+  /*needs to be changed to match this pseudo-code
+  getMovieInfo(){
+    while or for (parse through all movies){
+      if(movie.getdate() == today)
+        return this.http.get<MovieInfo []>(link)
+    }
+  }
+*/
   getMovieInfo(){
     return this.http.get<MovieInfo>('https://api.themoviedb.org/3/movie/550?api_key=ba25ba134879219e9e3c39e8aeb9d179');
   }
+
 
   showMovieInfo(){
     this.getMovieInfo().subscribe((data: MovieInfo)=>{
