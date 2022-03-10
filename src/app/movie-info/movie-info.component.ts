@@ -27,7 +27,7 @@ export class MovieInfoComponent implements OnInit {
 
   getMovieDate()
   {
-     let i = Math.floor(Math.random()*100);
+     let i = Math.floor(Math.random()*1000);
         var movie = this.getMovieInfo(i).subscribe((data: MovieInfo)=>{
           console.log(data);
       this.movInfo = data;
