@@ -17,27 +17,27 @@ export class MovieInfoComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Sending Request to Server");
-    this.showMovieInfo();
+    this.getMovieDate();
   }
 
 
-  getMovieInfo(){
-    return this.http.get<MovieInfo>('https://api.themoviedb.org/3/movie/550?api_key=ba25ba134879219e9e3c39e8aeb9d179');
+  getMovieInfo(i:number){
+    return this.http.get<MovieInfo>('https://api.themoviedb.org/3/movie/'+i+'?api_key=ba25ba134879219e9e3c39e8aeb9d179');
   }
 
- /* getMovieDate()
+  getMovieDate()
   {
-     for(let i=1; i<10; i++){
+     let i = Math.floor(Math.random()*100);
         var movie = this.getMovieInfo(i).subscribe((data: MovieInfo)=>{
           console.log(data);
       this.movInfo = data;
         });
-     } 
-  }*/
+      
+  }
 
 
   showMovieInfo(){
-    this.getMovieInfo().subscribe((data: MovieInfo)=>{
+    this.getMovieInfo(1).subscribe((data: MovieInfo)=>{
       console.log(data);
       this.movInfo = data;
     })
