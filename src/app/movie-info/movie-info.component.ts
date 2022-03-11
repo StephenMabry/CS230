@@ -83,10 +83,4 @@ export class MovieInfoComponent implements OnInit {
     return todaysDate;
   }
 
-  showMovieInfo() {
-    this.getMovieInfo(1).subscribe((data: MovieInfo) => {
-      console.log(data);
-      this.movInfo = data;
-    })
-  }
 }
