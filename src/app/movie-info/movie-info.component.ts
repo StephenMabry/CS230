@@ -20,7 +20,7 @@ export class MovieInfoComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Sending Request to Server");
-    for (let movie_id = 2; movie_id < 15000; movie_id++) {
+    for (let movie_id = 2; movie_id < 20; movie_id++) {
       this.showMovieInfo(movie_id);
       
     }
