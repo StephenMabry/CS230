@@ -13,14 +13,13 @@ export class MovieInfoComponent implements OnInit {
   movInfo: MovieInfo | undefined;
 
   movieList: MovieInfo[] = [];
-  
 
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     console.log("Sending Request to Server");
-    for (let movie_id = 2; movie_id < 20; movie_id++) {
+    for (let movie_id = 2; movie_id < 40000; movie_id++) {
       this.showMovieInfo(movie_id);
       
     }
@@ -32,14 +31,21 @@ export class MovieInfoComponent implements OnInit {
   }
 
   showMovieInfo(movie_id: number){
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    let regExpYear = new RegExp('^[+ 0-9]{4}-'+mm+'-'+dd);
     this.getMovieInfo(movie_id).subscribe((data: MovieInfo)=>{
       console.log(data);
       this.movInfo = data;
       if (this.movInfo == undefined){
         return;
       }
-      else{
+      else if(regExpYear.test(this.movInfo.release_date)){
         this.movieList.push(data)
+      }
+      else{
+        return;
       }
     })
   }
