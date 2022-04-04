@@ -9,10 +9,10 @@ import { MovieInfo } from '../movie-info/movie-info.model';
 })
 export class HomeLayoutComponent implements OnInit {
     movies: MovieInfo[] = [];
-  constructor() { }
+  constructor(private movie: MovieInfoComponent) { }
 
   ngOnInit(): void {
-    this.movies = MovieInfoComponent.allMoviesToday;
+    this.movies = MovieInfoComponent.arguments.movieList;
   }
 
 }

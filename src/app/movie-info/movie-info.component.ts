@@ -15,6 +15,7 @@ export class MovieInfoComponent implements OnInit {
   movInfo: MovieInfo | undefined;
 
   movieList: MovieInfo[] = [];
+  
 
 
   constructor(private http: HttpClient) { }
@@ -25,6 +26,7 @@ export class MovieInfoComponent implements OnInit {
       this.showMovieInfo(movie_id);
       
     }
+    
   }
 
   getMovieInfo(movie_id: number){
