@@ -17,7 +17,7 @@ export interface MovieInfo {
     original_title: string,
     overview: string,
     popularity: number,
-    poster_path: null,
+    poster_path: string,
     production_companies: [
         {
             id: number,
