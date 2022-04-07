@@ -4,11 +4,10 @@ export interface MovieInfo {
     backdrop_path: string,
     belongs_to_collection: object,
     budget: number,
-    genres: [
-        {
+    genres: [{
             id: number,
             name: string,
-        }
+        }      
     ],
     homepage: string,
     id: number,

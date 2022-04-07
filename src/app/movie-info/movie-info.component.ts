@@ -17,7 +17,6 @@ export class MovieInfoComponent implements OnInit {
   movie_poster: string = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/";
 
   movieList: MovieInfo[] = [];
-  
 
 
   constructor(private http: HttpClient) { }

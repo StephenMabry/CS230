@@ -8,6 +8,11 @@
                 <br>
                 Movie_ID: {{movie.id}}
                 <br>
+                Genres:
+                <span *ngFor="let genres of movie.genres">
+                    {{genres.name}}
+                </span>
+                <br>
                 <img src={{movie_poster+movie.poster_path}} alt="">
                 <br>
             </div>
