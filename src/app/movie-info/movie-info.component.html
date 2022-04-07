@@ -1,21 +1,29 @@
 <div *ngFor="let movie of movieList" class="container-fluid user-information">
     <div>
         <div class="row">
-            <div class="col-3">
-                Title: {{movie.title}}
-                <br>
-                Release Date: {{movie.release_date}}
-                <br>
-                Movie_ID: {{movie.id}}
-                <br>
-                Genres:
-                <span *ngFor="let genres of movie.genres">
-                    {{genres.name}}
-                </span>
-                <br>
-                <img src={{movie_poster+movie.poster_path}} alt="">
-                <br>
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="card movie-card">
+                    <div class="movie-title">
+                    {{movie.title}}
+                    </div>
+                    <br>
+                    <img src={{movie_poster+movie.poster_path}} alt="">
+                    <br>
+                    
+                    Release Date: {{movie.release_date}}
+                    <br>
+                    Movie_ID: {{movie.id}}
+                    <br>
+                    Genres:
+                    <span *ngFor="let genres of movie.genres">
+                        {{genres.name}}
+                    </span>
+                    <br>
+                    
+                </div>
             </div>
+            <div class="col-3"></div>
         </div>
 
     </div>
