@@ -1,5 +1,6 @@
 .movie-card{
     width: auto;
+    background-color: dark;
 }
 
 .movie-title{
@@ -8,4 +9,13 @@
 
 .movie-image{
     width:auto;
+}
+
+.movie-overview{
+    overflow:auto;
+    text-overflow: ellipsis;
+}
+
+.col-8{
+    min-width: 50%;
 }
