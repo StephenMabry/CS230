@@ -1,8 +1,10 @@
-<div *ngFor="let movie of movies">
-    <m2d-movie-info
-    title = {{movie.title}}
-    >...</m2d-movie-info>
+<app-top-navbar>...</app-top-navbar>
 
+<div class="row">
+    <div class="col-2"></div>
+        <div class="col-8">
+            <m2d-movie-info>...</m2d-movie-info>
+        </div>
+    <div class="col-2"></div>
 </div>
-<m2d-movie-info>...</m2d-movie-info>
 

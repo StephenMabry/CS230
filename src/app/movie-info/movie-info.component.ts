@@ -14,15 +14,16 @@ export class MovieInfoComponent implements OnInit {
 
   movInfo: MovieInfo | undefined;
 
+  movie_poster: string = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/";
+
   movieList: MovieInfo[] = [];
-  
 
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     console.log("Sending Request to Server");
-    for (let movie_id = 2; movie_id < 5000; movie_id++) {
+    for (let movie_id = 2; movie_id < 2000; movie_id++) {
       this.showMovieInfo(movie_id);
       
     }

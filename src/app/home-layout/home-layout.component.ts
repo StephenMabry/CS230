@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieInfoComponent } from '../movie-info/movie-info.component';
-import { MovieInfo } from '../movie-info/movie-info.model';
 
 @Component({
   selector: 'home-layout',
@@ -8,11 +6,9 @@ import { MovieInfo } from '../movie-info/movie-info.model';
   styleUrls: ['./home-layout.component.css']
 })
 export class HomeLayoutComponent implements OnInit {
-    movies: MovieInfo[] = [];
-  constructor(private movie: MovieInfoComponent) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.movies = MovieInfoComponent.arguments.movieList;
   }
 
 }
