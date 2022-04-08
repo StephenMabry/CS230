@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "movieoftheday-accae": {
+      "hosting": {
+        "MovieOfTheDay": [
+          "movieoftheday-accae"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "movieoftheday-accae"
+  }
+}

@@ -1,0 +1,26 @@
+<div class = "container">
+    <div class = "row">
+        <div class = "col-6">
+            <form #authForm = "ngForm" (ngSubmit) = "onSubmit(authForm)">
+                <div class = "input-group">
+                    <span class="input-group-text">
+                        Email
+                    </span>
+                    <input type="text" class = "form-control" placeholder = "user@email.com"
+                        ngModel name = "email"
+                        required email>
+                </div>
+                <div class = "input-group">
+                    <span class="input-group-text">
+                        Password 
+                    </span>
+                    <input type="password" class = "form-control" placeholder = "*************"
+                        ngModel name = "password"
+                        required password minlength = "8">
+                </div>
+                <button class = "btn btn-dark" type = "submit" [disabled] = "!authForm.valid">Login</button>
+                <button class = "btn btn-dark" type = "submit" >Signup</button>
+            </form>
+        </div>
+    </div>
+</div>
