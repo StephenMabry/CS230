@@ -1,3 +1,11 @@
+.row {
+    white-space: nowrap;
+}
+
+.row > div {
+    display: inline-block;
+}
+
 .info-text{
     color: black;
 }
@@ -15,4 +23,8 @@
     max-width: 175px;
     background-color: blueviolet;
     border-color: black;
+}
+
+.btn-primary:hover{
+    background-color: rgb(156, 50, 255);
 }
