@@ -10,3 +10,9 @@
 .url:hover{
     text-decoration: underline;
 }
+
+.btn-primary{
+    max-width: 175px;
+    background-color: blueviolet;
+    border-color: black;
+}
