@@ -9,6 +9,7 @@ import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 import { UserProfileComponent } from './user-profile-page/user-profile.component';
 import { ProfilePicCard } from './user-profile-page/profile-pic.component';
+import { UserMoviesCarousel } from './user-profile-page/user-movies.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProfilePicCard } from './user-profile-page/profile-pic.component';
     HomeLayoutComponent,
     TopNavbarComponent,
     UserProfileComponent,
-    ProfilePicCard
+    ProfilePicCard,
+    UserMoviesCarousel
   ],
   imports: [
     BrowserModule,
