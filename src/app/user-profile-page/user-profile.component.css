@@ -1,0 +1,12 @@
+.info-text{
+    color: black;
+}
+
+.url{
+    text-decoration: none;
+    color: black;
+}
+
+.url:hover{
+    text-decoration: underline;
+}
