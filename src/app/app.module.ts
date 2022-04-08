@@ -11,6 +11,9 @@ import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 import { UserComponent } from './Users/user.component';
 import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
+import { UserProfileComponent } from './user-profile-page/user-profile.component';
+import { ProfilePicCard } from './user-profile-page/profile-pic.component';
+import { UserMoviesCarousel } from './user-profile-page/user-movies.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { environment } from 'src/environments/environment';
     MovieInfoComponent,
     HomeLayoutComponent,
     TopNavbarComponent,
-    UserComponent
+    UserComponent,
+    UserProfileComponent,
+    ProfilePicCard,
+    UserMoviesCarousel
   ],
   imports: [
     BrowserModule,
