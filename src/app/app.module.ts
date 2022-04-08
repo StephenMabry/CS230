@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { TopNavbarComponent } from './top-navbar/top-navbar.component';
+import { UserProfileComponent } from './user-profile-page/user-profile.component';
+import { ProfilePicCard } from './user-profile-page/profile-pic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieInfoComponent,
     HomeLayoutComponent,
-    TopNavbarComponent
+    TopNavbarComponent,
+    UserProfileComponent,
+    ProfilePicCard
   ],
   imports: [
     BrowserModule,

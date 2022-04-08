@@ -1,0 +1,13 @@
+.round-card{
+    width: 100px;
+    height: 110px;
+}
+
+.image-link{
+    width: 80px;
+    height: 80px;
+}
+
+.card{
+    border-style: none;
+}
