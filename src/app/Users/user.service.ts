@@ -26,4 +26,11 @@ export class UserService{
 
     }
 
+    public login(email:string, password:string){
+       const requestPayload = {
+        'email':email,
+        'password':password,
+       }
+    }
+
 }
