@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './Users/user.component';
 import { UserProfileComponent } from './user-profile-page/user-profile.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { InterestSurveyComponent } from './Interests-Page/interest-survey.component';
 
 const routes: Routes = [
   {path: '', component: HomeLayoutComponent},
   {path: 'auth', component: UserComponent},
   {path: 'User-Profile', component: UserProfileComponent},
+  {path: 'Interests', component: InterestSurveyComponent}
 ];
 
 @NgModule({

@@ -14,6 +14,8 @@ import { environment } from 'src/environments/environment';
 import { UserProfileComponent } from './user-profile-page/user-profile.component';
 import { ProfilePicCard } from './user-profile-page/profile-pic.component';
 import { UserMoviesCarousel } from './user-profile-page/user-movies.component';
+import { InterestSurveyComponent } from './Interests-Page/interest-survey.component';
+import { ButtonSelectionsComponent } from './Interests-Page/button-selections.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UserMoviesCarousel } from './user-profile-page/user-movies.component';
     UserComponent,
     UserProfileComponent,
     ProfilePicCard,
-    UserMoviesCarousel
+    UserMoviesCarousel,
+    InterestSurveyComponent,
+    ButtonSelectionsComponent
   ],
   imports: [
     BrowserModule,
