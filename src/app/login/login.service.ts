@@ -11,9 +11,9 @@ export class LoginService {
     private loginEndpoint: string = "login";
 
     public constructor(private http: HttpClient) {
-
-
+        
     }
+
     public login(email: string, password: string) {
         const requestPayload = {
             'email': email,
