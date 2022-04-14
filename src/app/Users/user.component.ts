@@ -14,18 +14,8 @@ export class UserComponent implements OnInit {
   }
 
   public onSubmit(data: any){
-   
-    console.log("Button clicked");
-    console.log(data);
-    
-    var buttonClicked = data['name'];
-    console.log("did the thing");
-    console.log(buttonClicked);
-    
-    if(buttonClicked == "signup"){
-      this.auth.signup(data.value.email, data.value.password).subscribe(data => {console.log(data)});
-      console.log("added");
-    }
+    this.auth.signup(data.value.email, data.value.password).subscribe(data => {console.log(data)});
+    console.log("added");
 
     data.reset();
     
