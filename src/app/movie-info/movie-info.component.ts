@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { ThisReceiver } from '@angular/compiler';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MovieInfo } from './movie-info.model';
-import { MovieDate } from './movie-info-discover.model';
 
 @Component({
   selector: 'm2d-movie-info',
@@ -25,9 +23,9 @@ export class MovieInfoComponent implements OnInit {
     console.log("Sending Request to Server");
     for (let movie_id = 2; movie_id < 2000; movie_id++) {
       this.showMovieInfo(movie_id);
-      
+
     }
-    
+
   }
 
   getMovieInfo(movie_id: number){
