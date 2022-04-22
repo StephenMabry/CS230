@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 import { UserProfileComponent } from './user-profile-page/user-profile.component';
 import { ProfilePicCard } from './user-profile-page/profile-pic.component';
 import { UserMoviesCarousel } from './user-profile-page/user-movies.component';
+import { MoviePageComponent } from './movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UserMoviesCarousel } from './user-profile-page/user-movies.component';
     UserComponent,
     UserProfileComponent,
     ProfilePicCard,
-    UserMoviesCarousel
+    UserMoviesCarousel,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,

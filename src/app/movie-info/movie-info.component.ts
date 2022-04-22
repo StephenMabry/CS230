@@ -23,7 +23,7 @@ export class MovieInfoComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Sending Request to Server");
-    for (let movie_id = 2; movie_id < 20000; movie_id++) {
+    for (let movie_id = 2; movie_id < 2000; movie_id++) {
       this.showMovieInfo(movie_id);
       
     }
@@ -46,12 +46,17 @@ export class MovieInfoComponent implements OnInit {
         return;
       }
       else if(regExpYear.test(this.movInfo.release_date)){
-        this.movieList.push(data)
+        this.movieList.push(data);
       }
       else{
         return;
       }
     })
+  }
+
+  getMovieList(){
+    let movies = this.movieList;
+    return movies;
   }
 
 }

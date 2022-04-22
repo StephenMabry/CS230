@@ -1,4 +1,7 @@
-<div *ngFor="let movie of movieList" class="container-fluid user-information">
+<div *ngIf= "movie == undefined">
+    Did not get it
+</div>
+<div *ngIf= "movie != undefined" class="container-fluid user-information">
     <div class="card bg-dark text-light m-3">
         <div class="row g-0">
             <div class="col-md-4">
@@ -17,7 +20,6 @@
                     </p>
                     <a class="text-primary" href="https://www.youtube.com/results?search_query={{movie.title}}+trailer" target="_blank">Movie Trailer</a>
                     <br>
-                    <a [routerLink]="['/movie',movie.id.toString()]">Details</a>
                 </div>
             </div>
     </div>
