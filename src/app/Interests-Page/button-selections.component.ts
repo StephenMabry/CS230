@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: 'button-selections',
@@ -6,5 +6,17 @@ import { Component } from "@angular/core";
     styleUrls: ['button-selections.component.css']
   })
 export class ButtonSelectionsComponent {
+
+  constructor() {
+
+  }
+
+  ngOnInit(): void{
+
+  }
+
+  public onSubmit(data: any){
+    
+  }
 
 }
