@@ -15,6 +15,8 @@ import { UserProfileComponent } from './user-profile-page/user-profile.component
 import { ProfilePicCard } from './user-profile-page/profile-pic.component';
 import { UserMoviesCarousel } from './user-profile-page/user-movies.component';
 import { LoginComponent } from './login/login.component';
+import { InterestSurveyComponent } from './Interests-Page/interest-survey.component';
+import { ButtonSelectionsComponent } from './Interests-Page/button-selections.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { LoginComponent } from './login/login.component';
     UserProfileComponent,
     ProfilePicCard,
     UserMoviesCarousel,
-    LoginComponent
+    LoginComponent,
+    InterestSurveyComponent,
+    ButtonSelectionsComponent
   ],
   imports: [
     BrowserModule,
