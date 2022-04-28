@@ -6,8 +6,8 @@ import { MovieDate } from './movie-info-discover.model';
 
 @Component({
   selector: 'm2d-movie-info',
-  templateUrl: './movie-info.component.html',
-  styleUrls: ['./movie-info.component.css']
+  templateUrl: 'movie-info.component.html',
+  styleUrls: ['movie-info.component.css']
 })
 
 export class MovieInfoComponent implements OnInit {
