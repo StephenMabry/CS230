@@ -1,7 +1,6 @@
 .container-2{
     background-color: black;
 }
-
 .today-title{
     margin-top: 10px;
     margin-left: 1rem;
@@ -40,14 +39,17 @@
     height: 100%;
     width:100%;
 }
-.home-subCard{
+.card-body{
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 0.75px black;
+}
+.card-title{
     font-size: 2.5rem;
     -webkit-text-stroke: 0.75px black;
     -webkit-text-fill-color:white;
 }
-.home-subText{
+.card{
     font-size: 1.5rem;
-    -webkit-text-stroke: 0.75px black;
-    -webkit-text-fill-color:white;
+    color: white;
 }
 
