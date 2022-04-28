@@ -14,12 +14,12 @@ export class Movies {
   }
 }
 @Component({
-  selector: 'home-layout',
-  templateUrl: './home-layout.component.html',
-  styleUrls: ['./home-layout.component.css']
+  selector: 'hot-movies',
+  templateUrl: './hot-movies.component.html',
+  styleUrls: ['./hot-movies.component.css']
 })
 
-export class HomeLayoutComponent implements OnInit {
+export class HotMoviesComponent implements OnInit {
   _movieList: results[]; // List of each movie obj 
   api_path: string = "https://image.tmdb.org/t/p/original/";
   _id: api_Root[] = []; // List of movie id number
