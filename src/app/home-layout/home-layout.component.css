@@ -1,17 +1,14 @@
 .container-2{
-    height: 75rem;
     background-color: black;
-    /* margin: auto; */
 }
 
 .today-title{
-    margin-top: 40rem;
+    margin-top: 10px;
     margin-left: 1rem;
-    font-size: 5rem;
+    margin-bottom: 20%;
+    font-size: 50px;
     -webkit-text-stroke: 2px black;
     -webkit-text-fill-color:white;
-
-    
 }
 .today-subtext1 {
     margin-left: 1rem;
@@ -19,7 +16,8 @@
 }
 .today-overview{
     margin-left: 1rem;
-    font-size: 2rem;
+    font-size: 25px;
+    overflow:hidden;
     -webkit-text-stroke: 0.75px black;
     -webkit-text-fill-color:white;
 }
@@ -39,8 +37,8 @@
     margin-right:0rem;
     /* display: flex;  centers text*/
     justify-content: center;
-    max-height: 175%;
-    max-width:175%;
+    height: 100%;
+    width:100%;
 }
 .home-subCard{
     font-size: 2.5rem;
