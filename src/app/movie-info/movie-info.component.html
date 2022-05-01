@@ -11,8 +11,9 @@
                     <p class="card-text"><small class="text-muted">Runtime: {{movie.runtime}}min</small></p>                          
                     <p class="card-text movie-overview">{{movie.overview}}</p>
                     <p>
+                        Genres: |
                         <span class="card-text" *ngFor="let genres of movie.genres">
-                            Genres: {{genres.name}},
+                            {{genres.name}} |
                         </span>
                     </p>
                     <a class="text-primary" href="https://www.youtube.com/results?search_query={{movie.title}}+trailer" target="_blank">Movie Trailer</a>
