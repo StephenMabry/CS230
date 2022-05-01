@@ -18,7 +18,7 @@ export class MovieInfoComponent implements OnInit {
   ngOnInit(): void {
     console.log("Sending Request to Server");
 
-    for (let movie_id = 2; movie_id < 10000; movie_id++) {
+    for (let movie_id = 2; movie_id < 3000; movie_id++) {
       this.showMovieInfo(movie_id);
     }
     this.sortMovies(this.movieList)
