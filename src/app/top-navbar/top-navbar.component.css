@@ -1,3 +1,9 @@
 .nav-item{
     text-emphasis-color: black;
 }
+
+.navbar{
+    background-color:rgb(151, 99, 199);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
