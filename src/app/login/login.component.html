@@ -18,7 +18,7 @@
                         ngModel name = "password"
                         required password minlength = "8">
                 </div>
-                <button class = "btn btn-dark" id = "signup" name = "submitButton" type = "submit" >Signup</button>
+                <button class = "btn btn-dark" id = "login" name = "submitButton" type = "submit" [disabled] = "!authForm.valid">Login</button>
             </form>
         </div>
     </div>
