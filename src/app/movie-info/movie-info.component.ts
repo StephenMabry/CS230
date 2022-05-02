@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { ThisReceiver } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { MovieInfo } from './movie-info.model';
-import { MovieDate } from './movie-info-discover.model';
 
 @Component({
   selector: 'm2d-movie-info',
