@@ -1,4 +1,7 @@
-<div *ngFor="let movie of movieList" class="container-fluid user-information">
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+<div *ngFor="let movie of movieList | slice:0:5; let i = index;" class="container-fluid user-information">
     <div class="card bg-dark text-light m-3">
         <div class="row g-0">
             <div class="col-md-4">
@@ -8,11 +11,12 @@
                 <div class="card-body">
                     <h3 class="card-title mb-0">{{movie.title}}</h3>
                     <p class="card-text mb-0"><small class="text-muted">Release Date: {{movie.release_date}}</small></p>
-                    <p class="card-text"><small class="text-muted">Runtime: {{movie.runtime}}min</small></p>                          
+                    <p class="card-text"><small class="text-muted">Runtime: {{movie.runtime}}min</small></p>
                     <p class="card-text movie-overview">{{movie.overview}}</p>
                     <p>
+                        Genres: |
                         <span class="card-text" *ngFor="let genres of movie.genres">
-                            Genres: {{genres.name}},
+                            {{genres.name}} |
                         </span>
                     </p>
                     <a class="text-primary" href="https://www.youtube.com/results?search_query={{movie.title}}+trailer" target="_blank">Movie Trailer</a>
@@ -21,4 +25,7 @@
                 </div>
             </div>
     </div>
+</div>
+</div>
+<div class="col-2"></div>
 </div>
