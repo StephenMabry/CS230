@@ -17,6 +17,7 @@ import { UserMoviesCarousel } from './user-profile-page/user-movies.component';
 import { LoginComponent } from './login/login.component';
 import { InterestSurveyComponent } from './Interests-Page/interest-survey.component';
 import { ButtonSelectionsComponent } from './Interests-Page/button-selections.component';
+import { MoviePageComponent } from './movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ButtonSelectionsComponent } from './Interests-Page/button-selections.co
     UserMoviesCarousel,
     LoginComponent,
     InterestSurveyComponent,
-    ButtonSelectionsComponent
+    ButtonSelectionsComponent,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,
