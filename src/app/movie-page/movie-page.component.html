@@ -1,0 +1,60 @@
+<div *ngIf='mov != undefined' class="card bg-dark text-light m-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src={{movie_poster+mov.poster_path}} class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title mb-0">{{mov.title}}</h3>
+                <p class="card-text mb-0"><small class="text-muted">Release Date: {{mov.release_date}}</small></p>
+                <p class="card-text"><small class="text-muted">Runtime: {{mov.runtime}}min</small></p>
+                <p class="card-text movie-overview">{{mov.overview}}</p>
+                <p>
+                    <span class="card-text" *ngFor="let genres of mov.genres">
+                        Genres: {{genres.name}},
+                    </span>
+                </p>
+                <p class="card-text">Original language: {{mov.original_language}} </p>
+                <p>Spoken languages: |<span class="card-text" *ngFor="let lang of mov.spoken_languages"> {{lang.name}} |</span></p>
+                <p class="card-text">Popularity: {{mov.popularity}}%</p>
+                <p *ngIf='mov.budget!= 0' class="card-text">Budget: ${{mov.budget}}</p>
+                <p *ngIf='mov.revenue!= 0' class="card-text">Revenue: ${{mov.revenue}}</p>
+                <p class="card-text">Production companies:</p>
+                <ul *ngFor="let company of mov.production_companies">
+                   + {{company.name}}
+                </ul>
+
+                <a class="text-primary" href="https://www.youtube.com/results?search_query={{mov.title}}+trailer"
+                target="_blank">
+                    <button type="button" class="btn btn-outline-info" >Watch Trailer</button>
+                </a>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf='recommendationsList != undefined' class="container-fluid">
+    <h1>If you liked this movie, you might also like:</h1>
+    <div class="container-2 bd" *ngFor="let recommendation of recommendationsList.results"
+        style="width: 100%; height: 100%;">
+        <div class="card ">
+            <div class="row g-0 ">
+                <div class="col-2">
+                    <img src={{movie_poster+recommendation.poster_path}} class="img-fluid rounded" alt="...">
+                </div>
+                <div class="col-10 card-backgnd"
+                    [ngStyle]="{'background-image':'url('+movie_poster+recommendation.backdrop_path+')'}">
+                    <div class="card-body">
+                        <h5 class="card-title home-subCard">{{recommendation.title}}</h5>
+                        <p class="card-text home-subText">Release Date: {{recommendation.release_date}}</p>
+                        <p class="card-text home-subText">{{recommendation.overview}} </p>
+                        <a class="text-primary" href="https://www.youtube.com/results?search_query={{recommendation.title}}+trailer"
+                        target="_blank">
+                            <button type="button" class="btn btn-outline-info" >Watch Trailer</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
