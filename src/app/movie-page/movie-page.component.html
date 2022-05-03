@@ -1,29 +1,43 @@
+<!-- Displays movie if movie is of MovieInfo type -->
 <div *ngIf='mov != undefined' class="card bg-dark text-light m-3">
     <div class="row g-0">
         <div class="col-md-4">
+            <!--Retrieves movie poster-->
             <img src={{movie_poster+mov.poster_path}} class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8">
             <div class="card-body">
+                <!-- Retrieves movie title -->
                 <h3 class="card-title mb-0">{{mov.title}}</h3>
+                <!-- Retrieves movie release date -->
                 <p class="card-text mb-0"><small class="text-muted">Release Date: {{mov.release_date}}</small></p>
+                <!-- Retrieves movie runtime -->
                 <p class="card-text"><small class="text-muted">Runtime: {{mov.runtime}}min</small></p>
+                <!-- Retrieves movie overview -->
                 <p class="card-text movie-overview">{{mov.overview}}</p>
                 <p>Genres: | 
+                    <!-- Retrieves movie genres -->
                     <span class="card-text" *ngFor="let genres of mov.genres">
                         {{genres.name}} |
                     </span>
                 </p>
+                <!-- Retrieves movie original language -->
                 <p class="card-text">Original language: {{mov.original_language}} </p>
+                <!-- Retrieves movie spoken languages -->
                 <p>Spoken languages: |<span class="card-text" *ngFor="let lang of mov.spoken_languages"> {{lang.name}} |</span></p>
+                <!-- Retrieves movie popularity -->
                 <p class="card-text">Popularity: {{mov.popularity}}%</p>
+                <!-- Retrieves movie budget -->
                 <p *ngIf='mov.budget!= 0' class="card-text">Budget: ${{mov.budget}}</p>
+                <!-- Retrieves movie revenue -->
                 <p *ngIf='mov.revenue!= 0' class="card-text">Revenue: ${{mov.revenue}}</p>
+
                 <p class="card-text">Production companies:</p>
+                <!-- Retrieves movie production companies -->
                 <ul *ngFor="let company of mov.production_companies">
                    + {{company.name}}
                 </ul>
-
+                <!-- Provides youtube url with search query for movie -->
                 <a class="text-primary" href="https://www.youtube.com/results?search_query={{mov.title}}+trailer"
                 target="_blank">
                     <button type="button" class="btn btn-outline-info" >Watch Trailer</button>
@@ -33,22 +47,30 @@
         </div>
     </div>
 </div>
-<div *ngIf='recommendationsList != undefined' class="container-fluid">
+<!-- Displays similar movies if simList is of SimilarMovies type -->
+<div *ngIf='simList != undefined' class="container-fluid">
     <h1>If you liked this movie, you might also like:</h1>
-    <div class="container-2 bd" *ngFor="let recommendation of recommendationsList.results"
+    <!-- Displays each similar movie with few details -->
+    <div class="container-2 bd" *ngFor="let sim of simList.results"
         style="width: 100%; height: 100%;">
         <div class="card ">
             <div class="row g-0 ">
                 <div class="col-2">
-                    <img src={{movie_poster+recommendation.poster_path}} class="img-fluid rounded" alt="...">
+                    <!--Retrieves movie poster-->
+                    <img src={{movie_poster+sim.poster_path}} class="img-fluid rounded" alt="...">
                 </div>
+                    <!--Retrieves movie backdrop-->
                 <div class="col-10 card-backgnd"
-                    [ngStyle]="{'background-image':'url('+movie_poster+recommendation.backdrop_path+')'}">
+                    [ngStyle]="{'background-image':'url('+movie_poster+sim.backdrop_path+')'}">
                     <div class="card-body">
-                        <h5 class="card-title home-subCard">{{recommendation.title}}</h5>
-                        <p class="card-text home-subText">Release Date: {{recommendation.release_date}}</p>
-                        <p class="card-text home-subText">{{recommendation.overview}} </p>
-                        <a class="text-primary" href="https://www.youtube.com/results?search_query={{recommendation.title}}+trailer"
+                        <!--Retrieves movie title-->
+                        <h5 class="card-title home-subCard">{{sim.title}}</h5>
+                        <!--Retrieves movie release date-->
+                        <p class="card-text home-subText">Release Date: {{sim.release_date}}</p>
+                        <!--Retrieves movie overview-->
+                        <p class="card-text home-subText">{{sim.overview}} </p>
+                        <!-- Provides youtube url with search query for movie -->
+                        <a class="text-primary" href="https://www.youtube.com/results?search_query={{sim.title}}+trailer"
                         target="_blank">
                             <button type="button" class="btn btn-outline-info" >Watch Trailer</button>
                         </a>
