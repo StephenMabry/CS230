@@ -30,6 +30,11 @@ export class MovieInfoComponent implements OnInit {
   }
 
 
+  /**
+   * Displays movie info if the movie is made on the same day as the day(not year) queried.
+   *
+   * @param movie_id - TMDB's ID for the movie
+   */
   showMovieInfo(movie_id: number){
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -51,6 +56,12 @@ export class MovieInfoComponent implements OnInit {
   }
 
 
+  /**
+   * Generates a score for the movie using a normalization and weighting algorithm that is customizable.
+   *
+   * @param movie - Movie object containing information about the movie
+   * @param movieList - List of movies
+   */
   scoreMovie(movie: MovieInfo, movieList: Array<MovieInfo>){
     const wPop = 0.65;   // movie popularity score weight
     const wVotes = 0.30;   // movie votes weight
@@ -81,7 +92,11 @@ export class MovieInfoComponent implements OnInit {
   }
 
 
-  // bubble-sort for passed in array of type MovieInfo
+  /**
+   * Bubble-sort for passed in array of type MovieInfo.
+   *
+   * @param movieList - List of movies
+   */
   sortMovies(movieList: Array<MovieInfo>){
       for (let i = 0; i < movieList.length; i++) {
         for (let k = 0; k < movieList.length; k++) {
