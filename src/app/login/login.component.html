@@ -3,7 +3,7 @@
         <div class = "col-6">
             <form #authForm = "ngForm" (ngSubmit) = "onSubmit(authForm)">
                 <div class = "input-group">
-                    <span class="input-group-text">
+                    <span class="input-group-text"> <!--input group for email-->
                         Email
                     </span>
                     <input type="text" class = "form-control" placeholder = "user@email.com"
@@ -11,13 +11,14 @@
                         required email>
                 </div>
                 <div class = "input-group">
-                    <span class="input-group-text">
+                    <span class="input-group-text"> <!--input group for password-->
                         Password 
                     </span>
                     <input type="password" class = "form-control" placeholder = "*************"
                         ngModel name = "password"
                         required password minlength = "8">
                 </div>
+                <!--submit button-->
                 <button class = "btn btn-dark" id = "login" name = "submitButton" type = "submit" [disabled] = "!authForm.valid">Login</button>
             </form>
         </div>

@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 @Injectable ({
     providedIn: 'root'
 })
-
+// Service for the login feature
 export class LoginService {
 
     private baseUrl: string = "https://identitytoolkit.googleapis.com/v1/accounts";
