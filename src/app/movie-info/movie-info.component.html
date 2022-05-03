@@ -1,36 +1,36 @@
-<div class="row"> //each movie card takes place on an individual row
+<div class="row"> <!--each movie card takes place on an individual row-->
     <div class="col-2"></div> //left side spacing
     <div class="col-8"> //center spacing
 
-        /*
+        <!--
             This ngFor loop will parse through all the movie in the movieList generated in the 
             movie-info.component.ts file and print the top 5 movies
-        */
+        -->
 <div *ngFor="let movie of movieList | slice:0:5; let i = index;" class="container-fluid user-information">
-    <div class="card bg-dark text-light m-3"> //bootstrap card
+    <div class="card bg-dark text-light m-3"> <!--bootstrap card-->
         <div class="row g-0">
             <div class="col-md-4">
-                <img src={{movie_poster+movie.poster_path}} class="img-fluid rounded-start" alt="..."> //pull the movie poster from the database
+                <img src={{movie_poster+movie.poster_path}} class="img-fluid rounded-start" alt="..."> <!--pull the movie poster from the database-->
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h3 class="card-title mb-0">{{movie.title}}</h3> //pulls the title from the database
-                    <p class="card-text mb-0"><small class="text-muted">Release Date: {{movie.release_date}}</small></p> //pulls the release data from the database
-                    <p class="card-text"><small class="text-muted">Runtime: {{movie.runtime}}min</small></p> //pulls the runtime from the database
-                    <p class="card-text movie-overview">{{movie.overview}}</p> //pulls the movie's overview from the database
+                    <h3 class="card-title mb-0">{{movie.title}}</h3> <!--pulls the title from the database-->
+                    <p class="card-text mb-0"><small class="text-muted">Release Date: {{movie.release_date}}</small></p> <!--pulls the release data from the database-->
+                    <p class="card-text"><small class="text-muted">Runtime: {{movie.runtime}}min</small></p> <!--pulls the runtime from the database-->
+                    <p class="card-text movie-overview">{{movie.overview}}</p> <!--pulls the movie's overview from the database-->
                     <p>
                         Genres: |
-                        <span class="card-text" *ngFor="let genres of movie.genres"> //prints the list of generes for which this movie applies
+                        <span class="card-text" *ngFor="let genres of movie.genres"> <!--prints the list of generes for which this movie applies-->
                             {{genres.name}} | 
                         </span>
                     </p>
-                    <a class="text-primary" href="https://www.youtube.com/results?search_query={{movie.title}}+trailer" target="_blank">Movie Trailer</a>
+                    <a class="text-primary" href="https://www.youtube.com/results?search_query={{movie.title}}+trailer" target="_blank">Movie Trailer</a> <!--youtube link to the trailer-->
                     <br>
-                    <a [routerLink]="['/movie',movie.id]">Details</a>
+                    <a [routerLink]="['/movie',movie.id]">Details</a> <!--more details about the movie-->
                 </div>
             </div>
     </div>
 </div>
 </div>
-<div class="col-2"></div> //right side spacing
+<div class="col-2"></div> <!--right side spacing-->
 </div>
