@@ -1,21 +1,15 @@
+/*sets the attriutes of the entire movie card*/
 .movie-card{
     width: auto;
     background-color: dark;
 }
 
+/*bolds the movies title*/ 
 .movie-title{
     font-weight: bold;
 }
 
+/*sets the movie poster image to auto fit, depending on screen size*/
 .movie-image{
     width:auto;
-}
-
-.movie-overview{
-    overflow:auto;
-    text-overflow: ellipsis;
-}
-
-.col-8{
-    min-width: 50%;
 }
