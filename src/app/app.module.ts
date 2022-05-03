@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { InterestSurveyComponent } from './Interests-Page/interest-survey.component';
 import { ButtonSelectionsComponent } from './Interests-Page/button-selections.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
+import { FooterComponent } from './Footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MoviePageComponent } from './movie-page/movie-page.component';
     LoginComponent,
     InterestSurveyComponent,
     ButtonSelectionsComponent,
-    MoviePageComponent
+    MoviePageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
