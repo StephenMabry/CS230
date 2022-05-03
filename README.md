@@ -1,36 +1,3 @@
-
-<div id="top"></div>
-
-<!--
-
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-
-*** that would make this better, please fork the repo and create a pull request
-
-*** or simply open an issue with the tag "enhancement".
-
-*** Don't forget to give the project a star!
-
-*** Thanks again! Now go create something AMAZING! :D
-
--->
-
-<!-- PROJECT SHIELDS -->
-
-<!--
-
-*** I'm using markdown "reference style" links for readability.
-
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-
-*** See the bottom of this document for the declaration of the reference variables
-
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
-
--->
-
 [![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
@@ -53,7 +20,7 @@ A website that displays movies produced on today's date over the past decades.
 
 <br />
 
-<a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/tdevine1/WVU_CS230_2022.01_Group05"><strong>Explore the docs »</strong></a>
 
 <br />
 
@@ -143,13 +110,10 @@ This project was made by a group of students at West Virginia University for the
 
 ##  Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-
 To get a local copy up and running follow these simple example steps.
 
 ###  Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 
 * npm
 
@@ -160,8 +124,6 @@ npm install npm@latest -g
 ```
 
 ###  Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Get a free API Key at [https://www.themoviedb.org/documentation/api](https://www.themoviedb.org/documentation/api)
 
@@ -245,8 +207,6 @@ Project Link: [https://github.com/tdevine1/WVU_CS230_2022.01_Group05](https://gi
 <!-- ACKNOWLEDGMENTS -->
 
 ##  Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Our Amazing Professor!](https://github.com/tdevine1)
 
