@@ -24,7 +24,10 @@ export class MovieInfoComponent implements OnInit {
     this.sortMovies(this.movieList)
   }
 
-
+  /**
+   * Grabs the movie from a TMDB movie ID
+   * @param movie_id - TMDB movie ID
+   */
   getMovieInfo(movie_id: number){
     return this.http.get<MovieInfo>('https://api.themoviedb.org/3/movie/'+ movie_id +'?api_key=ba25ba134879219e9e3c39e8aeb9d179'); // <<< API KEY HERE
   }
