@@ -1,3 +1,4 @@
+//Data model for similar movies get request
 export interface SimilarMovies{
         page: number,
         results: [
