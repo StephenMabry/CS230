@@ -1,52 +1,83 @@
+<!-- Setting up the layout for this component  -->
 <div class="container">
+  <!-- Creating a row class to contain the information needed -->
   <div class="row">
+
+    <!-- Setting left boundary -->
     <div class="col-2"></div>
 
+    <!--Setting middle boundary -->
     <div class="col-8">
 
+      <!-- Page title information letting user know what page they are on -->
       <h1 class="text-center">Interests Survey</h1>
       <p class="secondary-text text-center">Filter your movie recommendations to your personal tastes!</p>
+      <!-- Line break -->
       <br>
 
 
+      <!-- Creating two different tabs one for preferred and one for disfavored -->
       <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+        <!-- Creating the navigation item for the preferred options -->
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="preferred-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
             role="tab" aria-controls="home" aria-selected="true">Preferred Options</button>
         </li>
+
+        <!-- Creating the navigation item for the disfavored options -->
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="disfavored-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
             role="tab" aria-controls="profile" aria-selected="false">Disfavored Options</button>
         </li>
       </ul>
+
+      <!-- Filling in each tab with (mostly) the same information -->
       <div class="tab-content" id="myTabContent">
+
+        <!-- FOR THE PREFERRED TAB -->
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="preferred-tab">
           <h4 class="text-center">Choose What You Want to See</h4>
 
+          <!-- Calls the buttons component which will put in all of the checkboxes for 
+            the user to choose between -->
           <button-selections>Loading</button-selections>
 
+          <!-- Creating a new row component to put the submition button on the next line -->
           <div class="row">
+
+            <!-- These column declarations match the column declarations in the buttons 
+              component. -->
             <div class="col-3"></div>
             <div class="col-4"></div>
-
             <div class="col-3">
+
+              <!-- Creating a submit button for the preferred tab -->
               <button class="btn btn-primary" type="submit">
                 Submit Preferred
               </button>
             </div>
           </div>
-
         </div>
+
+        <!-- FOR THE DISFAVORED TAB -->
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="disfavored-tab">
           <h4 class="text-center">Choose What You Don't Want to See</h4>
 
+          <!-- Calls the buttons component which will put in all of the checkboxes for 
+            the user to choose between -->
           <button-selections>Loading</button-selections>
 
+          <!-- Creating a new row component to put the submition button on the next line -->
           <div class="row">
+
+            <!-- These column declarations match the column declarations in the buttons 
+              component. -->
             <div class="col-3"></div>
             <div class="col-4"></div>
-
             <div class="col-3">
+
+              <!-- Creating a submit button for the preferred tab -->
               <button class="btn btn-primary" type="submit">
                 Submit Disfavored
               </button>
@@ -57,8 +88,9 @@
 
     </div>
 
+    <!-- Setting Right Boundary -->
     <div class="col-2"></div>
   </div>
-
-
 </div>
+
+<!-- END OF COMPONENT -->

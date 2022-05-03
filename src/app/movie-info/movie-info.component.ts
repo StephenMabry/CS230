@@ -26,7 +26,7 @@ export class MovieInfoComponent implements OnInit {
 
 
   getMovieInfo(movie_id: number){
-    return this.http.get<MovieInfo>('https://api.themoviedb.org/3/movie/'+ movie_id +'?api_key=ba25ba134879219e9e3c39e8aeb9d179');
+    return this.http.get<MovieInfo>('https://api.themoviedb.org/3/movie/'+ movie_id +'?api_key=ba25ba134879219e9e3c39e8aeb9d179'); // <<< API KEY HERE
   }
 
 
