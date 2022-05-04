@@ -13,11 +13,11 @@ const routes: Routes = [
   {path: '', component: MovieInfoComponent},
   {path: 'hot', component: HotMoviesComponent},
   {path: 'auth', component: UserComponent},
-  {path: 'User-Profile', component: UserProfileComponent},
+  {path: 'user-Profile', component: UserProfileComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'Interests', component: InterestSurveyComponent},
+  {path: 'interests', component: InterestSurveyComponent},
   {path: 'movie/:id', component: MoviePageComponent},
-  {path: 'Interests/genre', component: PreferencesComponent}
+  {path: 'genre', component: PreferencesComponent}
 ];
 
 @NgModule({

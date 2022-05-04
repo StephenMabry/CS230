@@ -56,6 +56,7 @@ export class ButtonSelectionsComponent {
 
     // Navigate to component B
     this.router.navigate(['genre'], navigationExtras);
+    console.log(navigationExtras);
   }
 
 }
