@@ -1,12 +1,15 @@
 import { HttpClient } from "@angular/common/http";
 import { getAttrsForDirectiveMatching } from "@angular/compiler/src/render3/view/util";
-import { Component, OnInit } from "@angular/core";
+import { Component, Injectable, OnInit } from "@angular/core";
 import { NavigationExtras, Router } from "@angular/router";
 
 @Component({
   selector: 'button-selections',
   templateUrl: 'button-selections.component.html',
   styleUrls: ['button-selections.component.css']
+})
+@Injectable({
+  providedIn: 'root'
 })
 export class ButtonSelectionsComponent {
 
@@ -35,6 +38,7 @@ export class ButtonSelectionsComponent {
     }
 
     console.log(this.list);
+    return this.list;
   }
 
   onSubmit() {
@@ -51,7 +55,7 @@ export class ButtonSelectionsComponent {
     };
 
     // Navigate to component B
-    this.router.navigate(['/genres'], navigationExtras);
+    this.router.navigate(['genre'], navigationExtras);
   }
 
 }
