@@ -1,3 +1,4 @@
+//Data model for a movie get request
 export interface MovieInfo {
 
     adult: boolean;
