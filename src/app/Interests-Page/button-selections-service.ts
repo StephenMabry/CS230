@@ -10,15 +10,24 @@ export class ButtonSelectionsService {
     public constructor(private http:HttpClient){
     }
 
-    private list:[string];
-    public genreList(genre:string){
-        this.list.push(genre);
-        console.log(this.list);
-    }
-
-    public returnGenreList(){
-        console.log(this.list);
-        return this.list;
+    genreList(){
+     //var list:[string];
+        const adventure = document.getElementById("Adventure") as HTMLInputElement;
+        if(adventure.checked){
+            console.log('Adventure');
+            
+        }
+        /*
+        document.getElementById("Animation").onclick = function(){
+            list.push("Animation")
+        }
+        document.getElementById("Comedy").onclick = function(){
+            list.push("Comedy")
+        }
+        
+        console.log(list);
+        return list;
+        */
     }
 
 }

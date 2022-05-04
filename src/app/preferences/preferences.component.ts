@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MovieInfo } from '../movie-info/movie-info.model';
+import { Preferences } from './preferences.model';
+
 
 @Component({
   selector: 'app-preferences',
@@ -12,13 +14,16 @@ export class PreferencesComponent implements OnInit {
   
 
   constructor(private http: HttpClient) { }
+  genre: string;
+  genreList: string[];
+
 
   ngOnInit(): void {
 
   }
 
-  getMovie(genre_id: number){
-    return this.http.get<MovieInfo>('https://api.themoviedb.org/3/movie/'+ genre_id +'?api_key=ba25ba134879219e9e3c39e8aeb9d179'); // <<< API KEY HERE
+  getMovies(genre){
+    return this.http.get<Preferences>('https://api.themoviedb.org/3/discover/movie?api_key=ba25ba134879219e9e3c39e8aeb9d179&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres='+genre+'&with_watch_monetization_types=flatrate'); // <<< API KEY HERE
   }
 
 
