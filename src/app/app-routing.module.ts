@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { InterestSurveyComponent } from './Interests-Page/interest-survey.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
+import { PreferencesComponent } from './preferences/preferences.component';
 
 const routes: Routes = [
   {path: '', component: MovieInfoComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'User-Profile', component: UserProfileComponent},
   {path: 'login', component: LoginComponent},
   {path: 'Interests', component: InterestSurveyComponent},
-  {path: 'movie/:id', component: MoviePageComponent}
+  {path: 'movie/:id', component: MoviePageComponent},
+  {path: 'genres/:genres', component: PreferencesComponent}
 ];
 
 @NgModule({

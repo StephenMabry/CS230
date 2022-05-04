@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { getAttrsForDirectiveMatching } from "@angular/compiler/src/render3/view/util";
 import { Component, OnInit } from "@angular/core";
+import { NavigationExtras, Router } from "@angular/router";
 
 @Component({
   selector: 'button-selections',
@@ -9,7 +10,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ButtonSelectionsComponent {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
 
   }
 
@@ -36,8 +37,21 @@ export class ButtonSelectionsComponent {
     console.log(this.list);
   }
 
-  public onSubmit(data: any) {
+  onSubmit() {
+        // Create our query parameters object
+    const queryParams: any = {};
+    // Create our array of values we want to pass as a query parameter
 
+    // Add the array of values to the query parameter as a JSON string
+    queryParams.myArray = JSON.stringify(this.list);
+
+    // Create our 'NaviationExtras' object which is expected by the Angular Router
+    const navigationExtras: NavigationExtras = {
+      queryParams
+    };
+
+    // Navigate to component B
+    this.router.navigate(['/genres'], navigationExtras);
   }
 
 }
