@@ -10,24 +10,6 @@ export class ButtonSelectionsService {
     public constructor(private http:HttpClient){
     }
 
-    genreList(){
-     //var list:[string];
-        const adventure = document.getElementById("Adventure") as HTMLInputElement;
-        if(adventure.checked){
-            console.log('Adventure');
-            
-        }
-        /*
-        document.getElementById("Animation").onclick = function(){
-            list.push("Animation")
-        }
-        document.getElementById("Comedy").onclick = function(){
-            list.push("Comedy")
-        }
-        
-        console.log(list);
-        return list;
-        */
-    }
+
 
 }
