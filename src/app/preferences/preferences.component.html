@@ -1,0 +1,26 @@
+<div class="row">
+<div class="col-2"></div>
+<div class="col-8">
+<div *ngFor="let movie of listResult">
+    <div class="card bg-dark text-light m-3"> <!--bootstrap card-->
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={{movie_poster+movie.poster_path}} class="img-fluid rounded-start" alt="..."> <!--pull the movie poster from the database-->
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="card-title mb-0">{{movie.title}}</h3> <!--pulls the title from the database-->
+                    <p class="card-text mb-0"><small class="text-muted">Release Date: {{movie.release_date}}</small></p> <!--pulls the release data from the database-->
+                    <p class="card-text movie-overview">{{movie.overview}}</p> <!--pulls the movie's overview from the database-->
+
+                    <a class="text-primary" href="https://www.youtube.com/results?search_query={{movie.title}}+trailer" target="_blank">Movie Trailer</a> <!--youtube link to the trailer-->
+                    <br>
+                    <a [routerLink]="['/movie',movie.id]">Details</a> <!--more details about the movie-->
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="col-2"></div> <!--right side spacing-->
+</div>

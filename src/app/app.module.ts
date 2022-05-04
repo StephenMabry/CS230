@@ -19,6 +19,7 @@ import { InterestSurveyComponent } from './Interests-Page/interest-survey.compon
 import { ButtonSelectionsComponent } from './Interests-Page/button-selections.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { FooterComponent } from './Footer/footer.component';
+import { PreferencesComponent } from './preferences/preferences.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FooterComponent } from './Footer/footer.component';
     InterestSurveyComponent,
     ButtonSelectionsComponent,
     MoviePageComponent,
-    FooterComponent
+    FooterComponent,
+    PreferencesComponent
   ],
   imports: [
     BrowserModule,

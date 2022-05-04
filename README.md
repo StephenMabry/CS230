@@ -1,3 +1,4 @@
+
 [![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
@@ -198,7 +199,17 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 
-##  Contact
+##  Contacts
+
+Shivan Prasad - [Github](https://github.com/shivanprasad) | [LinkedIn](https://www.linkedin.com/in/shivanprasad/) \
+Jack Amling - [Github](www.linkedin.com/in/jack-amling) | [LinkedIn](https://github.com/jaa0054) \
+Nate Huff - [Github](https://github.com/Nate-Huff) \
+Stanley Allotey - [Github](https://github.com/stallotey) \
+David Clark - [Github](https://github.com/djc00001) | [LinkedIn](https://www.linkedin.com/in/david-clark-883359237/) \
+Stephen Mabry - [Github](https://github.com/StephenMabry) | [LinkedIn](https://www.linkedin.com/in/stephen-mabry-546081217/) \
+Tim Thai - [Github](https://github.com/thai0521) \
+Jose Perez Vitale - [Github](https://github.com/josemavit24) | [LinkedIn](
+https://www.linkedin.com/in/jose-vitale-0784491a7/)
 
 Project Link: [https://github.com/tdevine1/WVU_CS230_2022.01_Group05](https://github.com/tdevine1/WVU_CS230_2022.01_Group05)
 
