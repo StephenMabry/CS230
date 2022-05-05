@@ -25,16 +25,10 @@
     max-width: 100%;
     max-height: 100vh;
 }
-.bb{
-    margin-left: 0rem;
-    margin-right: 0rem;
-    width: 25%;
-    margin: auto;
-}
-.bd{
+
+.bodyStyle{
     margin-left:0rem;
     margin-right:0rem;
-    /* display: flex;  centers text*/
     justify-content: center;
     height: 100%;
     width:100%;
