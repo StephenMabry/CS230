@@ -33,7 +33,6 @@ export class HotMoviesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovieID();
-    // getMovieInfo();
     for (let i = 0; i < this._list.length; i++) {
       this.showMovieInfo(this._list[i]);
     }
@@ -42,6 +41,7 @@ export class HotMoviesComponent implements OnInit {
     }
   }
 showMovieInfo(movie_id: number) {
+  // Request specific movie id to API and push data ArrayList
     this.getMovieInfo(movie_id).subscribe((data: MovieInfo) => {
       console.log(data);
       this.movInfo = data;
@@ -55,7 +55,8 @@ showMovieInfo(movie_id: number) {
       }
     })
   }
-  showWatchInfo(movie_id: number) {
+  showWatchInfo(movie_id: number) {  
+      // Request specific movie id to API and push data ArrayList (For WatchList)
     this.getMovieInfo(movie_id).subscribe((data: MovieInfo) => {
       console.log(data);
       this.movInfo = data;
@@ -77,7 +78,7 @@ showMovieInfo(movie_id: number) {
        // Checks API link status if (suceess:200 | fail: 404)    
           throw Error("ERROR");
         }
-        // Api output
+        // Api data output
         return response.json(); 
       })
       .then(data => {
@@ -103,6 +104,7 @@ showMovieInfo(movie_id: number) {
   }
 
   clickBtn(movie_id: number) {
+    // Add selected movie to watchList Array
     this._watchList.push(movie_id);
     console.log("Add item to list " + movie_id);
     console.log(this._watchList);   
